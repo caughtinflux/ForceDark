@@ -1,7 +1,9 @@
+#include <stdlib.h>
+
 %hook UIKBRenderConfig
 
 - (BOOL)lightKeyboard {
-    return NO;
+    return (arc4random() % 2); // fixed
 }
 
 %end
